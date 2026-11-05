@@ -707,6 +707,18 @@ footer {
 
 .icones img { display: block; }
 
+.rodape-baixo a {
+  color: var(--sol);
+  text-underline-offset: 0.2em;
+}
+
+.rodape-baixo a:hover,
+.rodape-baixo a:focus-visible {
+  color: var(--branco);
+}
+
+.conteudo-sobre ul { margin-bottom: 1rem; }
+
 .rodape-texto {
   color: var(--verde-escuro);
   font-family: var(--fonte-rodape);

@@ -131,3 +131,77 @@ Na criação do website, tivemos contato com a organização de páginas HTML, c
 Como resultado, foi desenvolvido um protótipo funcional de website para a AMILV, servindo também como experiência prática de desenvolvimento, organização de projeto e trabalho em equipe.
 
 # Segunda Entrega
+
+## Objetivo
+O objetivo da segunda entrega é aplicar estilização com CSS ao website da AMILV, desenvolvido apenas com HTML na primeira entrega. A partir de um arquivo de estilos único, o site passou a ter identidade visual própria, layout organizado, navegação mais clara e adaptação a diferentes tamanhos de tela.
+
+Além da estilização, foi adicionada uma página de Termos de serviço, construída com o mesmo CSS e integrada ao restante do site.
+
+## O que foi desenvolvido
+- Arquivo `main.css`, em `Projeto-Site`, vinculado a todas as páginas do site;
+- Identidade visual com paleta de cores e fontes definidas por variáveis CSS;
+- Estilização do cabeçalho, do menu de navegação, do rodapé e dos componentes de conteúdo;
+- Responsividade para telas menores;
+- Nova página `termos.html`, com link no rodapé de todas as páginas.
+
+## Processo de desenvolvimento
+
+O desenvolvimento da segunda entrega foi realizado sobre o site criado na primeira entrega, sem alterar a organização das páginas. O processo foi dividido em etapas para facilitar a organização do projeto e o trabalho em grupo.
+
+### (1) Definição da identidade visual
+
+A primeira etapa foi definir como o site deveria parecer. Foi criada uma paleta de cores com tons de verde, azul e amarelo sobre um fundo claro, buscando transmitir acolhimento e remetendo ao tema "Semeando sementes" presente no site.
+
+Foram escolhidas duas fontes do Google Fonts: Oswald, para títulos e menus, e Playfair Display, para os textos. As cores, as fontes e a sombra padrão foram reunidas em variáveis CSS (`:root`), o que permite alterar a aparência de todo o site em um único lugar.
+
+### (2) Criação e vinculação do arquivo CSS
+
+Foi criado o arquivo `main.css` e vinculado a todas as páginas HTML por meio da tag `<link>` no `<head>`. Na página inicial o caminho é `Projeto-Site/main.css` e, nas demais páginas, `../main.css`.
+
+Foi adotado um único arquivo de estilos para todo o site, garantindo que as páginas mantenham a mesma aparência e facilitando a manutenção.
+
+### (3) Estilização geral e do texto
+
+Foram aplicados o reset de margens e espaçamentos, o fundo da página com um padrão de pontos, a cor e o tamanho dos textos, o estilo das listas e a seleção de texto. Também foi definido o estilo dos links dentro do conteúdo.
+
+### (4) Cabeçalho e menu de navegação
+
+O cabeçalho recebeu fundo em degradê e uma borda de destaque, além de ficar fixo no topo da tela em dispositivos maiores. O menu, que utiliza as tags `<details>` e `<summary>` para os grupos "Conheça a AMILV", "Nossas ações" e "Participe", foi estilizado como menu suspenso, com efeitos ao passar o mouse ou navegar pelo teclado.
+
+A página em que o usuário está é destacada no menu a partir do atributo `aria-current="page"`.
+
+### (5) Componentes de conteúdo
+
+Foram criados estilos reutilizáveis para os principais blocos do site, aplicados nas diferentes páginas:
+- Layout principal em grade (grid) com duas colunas;
+- Bloco de destaque da página inicial;
+- Cartões de conteúdo (`article`), com cores alternadas;
+- Galerias de imagens com bordas e leve inclinação;
+- Seção de números de impacto;
+- Faixa de chamada para ação com botão;
+- Botões com sombra e efeito ao passar o mouse;
+- Cartões de parceiros;
+- Formulários, com campos, rótulos e botão de envio;
+- Estilo para perguntas frequentes.
+
+### (6) Rodapé
+
+O rodapé foi dividido em duas partes: a área superior, com a instituição realizadora e os ícones das redes sociais, e a área inferior, com os direitos autorais. Foi mantido o mesmo padrão em todas as páginas.
+
+### (7) Responsividade e acessibilidade
+
+Para que o site funcione em diferentes dispositivos, foram utilizadas medidas flexíveis (`rem`, `clamp()` e `minmax()`) e duas regras `@media`. Em telas menores, o layout passa para uma coluna, o cabeçalho e o menu são reorganizados e o rodapé é empilhado.
+
+Também foram aplicados cuidados de acessibilidade, como contorno visível no foco do teclado (`:focus-visible`) e animações apenas para quem não desativou os movimentos no sistema (`prefers-reduced-motion`).
+
+### (8) Termos de serviço
+
+Com o CSS pronto, foi criada a página `termos.html`, reaproveitando o cabeçalho, o rodapé e as classes já existentes. O conteúdo foi organizado em seções numeradas: sobre o website, uso do site, propriedade intelectual, doações e voluntariado, contato e dados pessoais, links externos, limitação de responsabilidade, alterações nos termos e dúvidas.
+
+O link "Termos de serviço" foi adicionado ao rodapé de todas as páginas, com um pequeno estilo próprio para boa leitura sobre o fundo escuro.
+
+## Considerações finais
+
+A segunda entrega permitiu aplicar, na prática, os conhecimentos de CSS da disciplina de Desenvolvimento Front-End para Web: uso de variáveis, layout com grid e flexbox, estilização de menus, responsividade com media queries e boas práticas de acessibilidade.
+
+Como resultado, o website da AMILV deixou de ser apenas uma estrutura em HTML e passou a ter uma identidade visual consistente em todas as páginas, mantendo a mesma navegação da primeira entrega e se aproximando de um site institucional completo.
